@@ -13,7 +13,7 @@ toogleMenu();
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    getAllPlaces();
 });
 
 const columns = document.querySelector('.columns');
@@ -45,3 +45,13 @@ function renderCard(place){
     columns.appendChild(card);
 }
 
+function getAllPlaces(){
+    fetch("http://localhost:3000/places")
+    .then(res => res.json())
+    .then(data=>{
+        console.log(data);
+        data.forEach(place => {
+            renderCard(place);
+        });
+    })
+}
