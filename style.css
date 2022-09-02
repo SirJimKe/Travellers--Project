@@ -63,7 +63,7 @@ a:hover {
 .columns{
     text-align: center;
     box-sizing: border-box;
-    margin-left: inherit; 
+    margin-left: 25%; 
 }
 
 .card {
@@ -71,7 +71,7 @@ a:hover {
     border: grey solid 1px;
     width: 40vw;
     height: auto;
-    display: inline-block;
+    display: block;
     margin-bottom: 10px;
     box-shadow: 3px 4px #4be09a;
 
@@ -84,7 +84,6 @@ div .image{
 .reviews{
     display: flex;
     justify-content: space-around;
-
 }
 form{
     padding-bottom: 5px;

@@ -10,3 +10,17 @@ function toogleMenu(){
     })
 }
 toogleMenu();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+});
+
+const heart = document.querySelector('.heart');
+const likes = document.querySelector('.likes');
+
+
+function renderCard(){
+    
+
+}
