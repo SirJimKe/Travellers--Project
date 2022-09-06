@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -65,13 +67,15 @@ a:hover {
 .columns{
     text-align: center;
     box-sizing: border-box;
-    margin-left: 25%; 
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: #c1eaf0;
 }
 
 .card {
     text-align: center;
     border: grey solid 1px;
-    width: 40vw;
+    width: auto;
     height: auto;
     display: block;
     margin-bottom: 10px;
@@ -81,7 +85,7 @@ a:hover {
 div .image{
     justify-self: center;
     height: 30rem;
-    width: 40vw;
+    width: 100%;
 }
 .reviews{
     display: flex;
@@ -117,6 +121,7 @@ form{
     height: 30px;
     border:0px;
     font-weight: bold;
+    background-color: #c1eaf0;
 }
 .submit:hover {
     color:#4be09a;
