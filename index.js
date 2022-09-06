@@ -14,6 +14,7 @@ toogleMenu();
 
 document.addEventListener('DOMContentLoaded', () => {
     getAllPlaces();
+    newPlace();
 });
 
 const columns = document.querySelector('.columns');
@@ -25,7 +26,8 @@ function renderCard(place){
     let card = document.createElement('div');
     card.className = "card";
     card.innerHTML = `
-        <h4>${place.description}</h4>
+        <h4>${place.name}</h4>
+        <h5>${place.description}</h5>
         <div class="card-image">
             <img class="image" src="${place.images}">
         </div>
@@ -104,19 +106,22 @@ function updateLikes(place){
     .then(data => console.log(data))
 }
 
-document.querySelector('#create-place').addEventListener('submit', (e)=>{
-    e.preventDefault();
+function newPlace(){
+    document.querySelector('#create-place').addEventListener('submit', (e)=>{
+        e.preventDefault();
 
+        let placeObj = {
+            name: e.target.name.value,
+            description: e.target.description.value,
+            images: e.target.image.value,
+            reviews:[],
+            likes:0
+        }
+        renderCard(placeObj)
+        createPlace(placeObj);
+    })
+}                   
 
-})
-
-let placeObj = {
-    name: e.target.name.value,
-    description: e.target.description.value,
-    images: e.target.image.value,
-    reviews:[],
-    likes:0
-}
 
 function createPlace(placeObj){
     fetch('http://localhost:3000/places', {
