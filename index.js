@@ -45,7 +45,23 @@ function renderCard(place){
         
         </div>
     `   
+    card.querySelector('form').addEventListener('submit', (e)=> {
+        e.preventDefault();
 
+        const div = card.querySelector('.review-holder')
+        const p = document.createElement('p');
+        const btn = document.createElement ('button');
+    
+        p.textContent = `${e.target.comment.value} `;
+        btn.innerText = 'x';
+    
+        p.appendChild(btn);
+        div.appendChild(p);
+    
+        btn.addEventListener('click', ()=>p.remove())
+        
+        card.querySelector('form').reset();
+    });
 
     card.querySelector('.heart').addEventListener('click', ()=>{
         place.likes += 1;
