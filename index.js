@@ -45,25 +45,15 @@ function renderCard(place){
             
         </div>
     `   
-    card.querySelector('form').addEventListener('submit', (e)=> {
-        e.preventDefault();
+    const div = card.querySelector('.review-holder')
 
-        const div = card.querySelector('.review-holder')
+    place.reviews.forEach((review)=>{
         const p = document.createElement('p');
-        const btn = document.createElement ('button');
-    
-        p.textContent = `${e.target.comment.value} `;
-        btn.innerText = 'x';
-    
-        p.appendChild(btn);
+        p.textContent = review;
         div.appendChild(p);
-    
-        btn.addEventListener('click', ()=>p.remove())
-        
-        card.querySelector('form').reset();
 
-        // updateReviews(place);
-    });
+    })
+    
 
     card.querySelector('.heart').addEventListener('click', ()=>{
         place.likes += 1;
@@ -87,6 +77,19 @@ function getAllPlaces(){
 }
 
 function updateLikes(place){
+    fetch(`http://localhost:3000/places/${place.id}`,{
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(place)
+    })
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+}
+
+function updateReviews(place){
     fetch(`http://localhost:3000/places/${place.id}`,{
         method: "PATCH",
         headers: {
