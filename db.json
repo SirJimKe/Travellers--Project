@@ -39,8 +39,16 @@
       "description": "Travelers, many from Europe, come here to sun on the white sands of Watamu Beach and dive the coral reefs of the Malindi and Watamu Marine National Parks. If you're looking for free things to do in Kenya, you can do worse than bask on a beautiful Malindi Beach.",
       "images": "https://www.planetware.com/photos-large/KEN/kenya-malindi.jpg",
       "reviews": [],
-      "likes": 0,
+      "likes": 51,
       "id": 4
+    },
+    {
+      "name": "Mount Kenya National Park",
+      "description": "Formed by a series of volcanic eruptions, Mount Kenya is actually comprised of three glacier-cloaked peaks. The highest is Batian, although Nelion, the next highest, is a tougher climb. The lowest peak, Lenana, is considered the easiest climb, although unpredictable weather can pose challenges.  Bring your camera. The striking scenery varies from glaciers, lakes, and mineral springs to alpine forest and dense pockets of bamboo.",
+      "images": "https://www.planetware.com/photos-large/KEN/kenya-mount-kenya-national-park.jpg",
+      "reviews": [],
+      "likes": 5,
+      "id": 5
     }
   ]
 }
