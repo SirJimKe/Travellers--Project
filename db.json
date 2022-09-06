@@ -33,6 +33,14 @@
         "Lamu Old Town is one of the most amazing places I've been in my life. It's vibrant, interesting and most of all: beautiful."
       ],
       "id": 3
+    },
+    {
+      "name": "Malindi",
+      "description": "Travelers, many from Europe, come here to sun on the white sands of Watamu Beach and dive the coral reefs of the Malindi and Watamu Marine National Parks. If you're looking for free things to do in Kenya, you can do worse than bask on a beautiful Malindi Beach.",
+      "images": "https://www.planetware.com/photos-large/KEN/kenya-malindi.jpg",
+      "reviews": [],
+      "likes": 0,
+      "id": 4
     }
   ]
 }

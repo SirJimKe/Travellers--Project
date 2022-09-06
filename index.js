@@ -107,7 +107,8 @@ function updateLikes(place){
 }
 
 function newPlace(){
-    document.querySelector('#create-place').addEventListener('submit', (e)=>{
+    const form = document.querySelector('#create-place')
+    form.addEventListener('submit', (e)=>{
         e.preventDefault();
 
         let placeObj = {
@@ -119,6 +120,7 @@ function newPlace(){
         }
         renderCard(placeObj)
         createPlace(placeObj);
+        form.reset();
     })
 }                   
 
