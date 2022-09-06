@@ -45,7 +45,9 @@ nav{
     text-align: right;
     display: block;
 }
-
+li {
+    list-style: none;
+  }
 nav ul li{
     list-style:none;
     display: inline-block;
@@ -98,7 +100,10 @@ form{
 }
 .review-holder p{
     text-align: left;
-    margin-left: 20px;
+    background-color: #f7ecb8;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 5px;
 }
 .comments{
     padding-right: 0%;

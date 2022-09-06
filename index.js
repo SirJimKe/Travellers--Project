@@ -14,6 +14,7 @@ toogleMenu();
 
 document.addEventListener('DOMContentLoaded', () => {
     getAllPlaces();
+
 });
 
 const columns = document.querySelector('.columns');
@@ -30,7 +31,9 @@ function renderCard(place){
             <img class="image" src="${place.images}">
         </div>
         <div class="reviews">
-            <p class="likes">${place.likes} likes<span class="heart">&nbsp  ❤️</span></p>
+            <p class="likes">
+                <span id="count">${place.likes} likes</span>
+                <span class="heart">&nbsp  ❤️</span></p>
             <a href="#"><i id="share" class="fa fa-share-nodes fa-lg"></i></a>
 
             <form>
@@ -39,10 +42,18 @@ function renderCard(place){
             </form>
         </div>
         <div class="review-holder">
-            <p>${place.reviews}</p>
+        
         </div>
     `   
+
+
+    card.querySelector('.heart').addEventListener('click', ()=>{
+        place.likes += 1;
+        card.querySelector('#count').textContent = `${place.likes} likes`
+    })
+
     columns.appendChild(card);
+
 }
 
 function getAllPlaces(){
