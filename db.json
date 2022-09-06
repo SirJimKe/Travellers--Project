@@ -1,7 +1,7 @@
 {
   "places": [
     {
-      "likes": 10,
+      "likes": 12,
       "images": "./images/Amboseli-National-Park.jpg",
       "description": "Adorned by the gigantic Mt. Kilimanjaro, Amboseli National Park is one of the top places to visit in Kenya for wildlife enthusiasts. Visit this place to spectate majestic views of the highest peak of Africa, and witness large herds of African elephants, and an extensive variety of wildlife such as Zebras, Giraffes, Cheetahs, and innumerable bird species.",
       "reviews": [
@@ -22,7 +22,7 @@
       "id": 2
     },
     {
-      "likes": 2,
+      "likes": 4,
       "images": "./images/lamu.jpg",
       "description": "If you’re looking for a laid-back destination with gorgeous beaches in Kenya, the Lamu archipelago is it. The pace of life slows down, and days blend into obscurity. If you’re a history buff, head to Lamu Town, which dates back centuries. As the oldest Swahili settlement along East Africa’s coastline, everything from the architecture to food is storied.",
       "reviews": [

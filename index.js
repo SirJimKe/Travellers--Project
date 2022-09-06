@@ -42,7 +42,7 @@ function renderCard(place){
             </form>
         </div>
         <div class="review-holder">
-        
+            
         </div>
     `   
     card.querySelector('form').addEventListener('submit', (e)=> {
@@ -61,11 +61,14 @@ function renderCard(place){
         btn.addEventListener('click', ()=>p.remove())
         
         card.querySelector('form').reset();
+
+        // updateReviews(place);
     });
 
     card.querySelector('.heart').addEventListener('click', ()=>{
         place.likes += 1;
-        card.querySelector('#count').textContent = `${place.likes} likes`
+        card.querySelector('#count').textContent = `${place.likes} likes`;
+        updateLikes(place);
     })
 
     columns.appendChild(card);
@@ -81,4 +84,17 @@ function getAllPlaces(){
             renderCard(place);
         });
     })
+}
+
+function updateLikes(place){
+    fetch(`http://localhost:3000/places/${place.id}`,{
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(place)
+    })
+    .then(resp => resp.json())
+    .then(data => console.log(data))
 }
