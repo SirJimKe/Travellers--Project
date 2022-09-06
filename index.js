@@ -14,7 +14,6 @@ toogleMenu();
 
 document.addEventListener('DOMContentLoaded', () => {
     getAllPlaces();
-
 });
 
 const columns = document.querySelector('.columns');
@@ -102,5 +101,32 @@ function updateLikes(place){
         body: JSON.stringify(place)
     })
     .then(resp => resp.json())
+    .then(data => console.log(data))
+}
+
+document.querySelector('#create-place').addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+
+})
+
+let placeObj = {
+    name: e.target.name.value,
+    description: e.target.description.value,
+    images: e.target.image.value,
+    reviews:[],
+    likes:0
+}
+
+function createPlace(placeObj){
+    fetch('http://localhost:3000/places', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(placeObj)
+    })
+    .then(res => res.json())
     .then(data => console.log(data))
 }
